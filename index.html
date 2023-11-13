@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>WEB</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--link rel="stylesheet" href="style_francais.css"/-->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <!--link rel="icon" type="image/x-icon" href="favicon.ico"-->
+    </head>
+    
+    <body>
+        <script type="text/javascript">
+            function toggle(bouton) {
+                var obj = document.getElementById(bouton);
+                if (obj.style.visibility == "visible") obj.style.visibility = "hidden";
+                else obj.style.visibility = "visible";
+        }
+        </script>
+
+        <script>
+            $(document).on("scroll", function() {
+                var pageTop = $(document).scrollTop();
+                var pageBottom = pageTop + $(window).height();
+                var tags = $(".tag");
+                
+                for (var i = 0; i < tags.length; i++) {
+                    var tag = tags[i];
+                    if ($(tag).position().top < pageBottom) {
+                    $(tag).addClass("visible");
+                    } else {
+                    $(tag).removeClass("visible");
+                    }
+                }
+                });
+        </script>
+        
+        <!-- Barre de navigation entre les pages-->
+        <ul class="barre">
+            <li class="barre active"><a class="lien_special active" href="francais.html">Français</a></li>
+            <li class="barre"><a class="lien_special" href="english.html">English</a></li>
+            <li class="barre"><a class="lien_special" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="contenu">
+            <div data-aos="fade-down" data-aos-duration="900">
+                <div class="centrer">
+                    <h1 class="titre1"> A propos</h1>
+                </div>
+                <div class="separateur"></div>
+            </div>
+            
+            
+            <div data-aos="fade-down" data-aos-duration="900">
+
+
+                <div class="centrer">
+                    <h1 class="titre1">Trouver des solutions</h1>
+                </div>
+
+                <table class="texte_principal">
+                  <tr/>
+                        <td class="colonne_bouton" style="height:89px; vertical-align:bottom; text-align:center">
+                            <button class="button button1" onclick="toggle('texte_bouton1')" style="vertical-align:middle">
+                                <span>Syntan ?</span>
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div id="texte_bouton1" style="vertical-align:top; text-align:center"> 
+                                <p class="texte_bouton1">Vocabulaire : Tanins synthétiques (syntan) = ensemble de produits ayant des propriétés astringentes vis-à-vis des protéines et notamment du collagène. Dans le domaine du cuir, ce terme englobe aussi des produits ayant des propriétés dispersantes ou remplissantes.</p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="separateur">  </div>
+            </div>
+
+       
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    </body>
+</html>
